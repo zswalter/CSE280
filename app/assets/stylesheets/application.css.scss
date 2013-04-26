@@ -1,0 +1,362 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  background-image: image-url("home/landing/background.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-x: hidden;
+  font-weight:900;
+}
+.forgot{
+	text-decoration:none;
+	margin-left: 260px;
+}
+
+/* This block is for entire menu bar div */
+#MenuBarDiv{
+  position:relative;
+  left: 50%;
+  top:-30px;
+  margin-left:-345px;
+}
+/* This block defines the list which of the menu links */
+.MenuBar{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+/* This block defines the We Deliver logo within the div */
+#WeDeliverLogo{
+  position: relative;
+  display:inline;
+  top:44px;
+}
+/* This block defines the styles for the menu links */
+.listStyle{
+  display:inline;
+  text-decoration:none;
+}
+/* Link styling */
+.menuBarLinks{
+  text-decoration:none;
+  color:black;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #800000;
+  }
+  text-decoration: none;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+
+/*Login and Register Links*/
+#login{
+  text-decoration: none;
+  color: black;
+  display: inline;
+}
+#login:hover{
+  color: #800000;
+  text-decoration: none;
+}
+
+.login{
+  margin: 0;
+  top: 155px;
+  left: 50%;
+  padding-left: 390px;
+  position: absolute;
+}
+.login ul li{
+  display: inline;
+  color: black;
+  text-decoration:none;
+}
+
+.loginOther{
+  margin: 0;
+  top: 50px;
+  left: 50%;
+  margin-left: 370px;
+  position: absolute;
+}
+.loginOther ul li{
+  display: inline;
+}
+
+
+#footer{
+  margin-top: 100px;
+  position: relative;
+   bottom: 50px; 
+   width: 100%;
+   text-align: center;
+}
+
+/*error notices and flash message*/
+#flash_notice {
+  position: absolute;
+  width: 400px;
+  height: 35px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  background-color: #a5d499;
+  padding-top: 10px;
+  margin-top: 25px;
+  margin-left: 100px;
+  border: 2px solid green;
+}
+
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0px;
+  margin-bottom: 5px;
+  top:30px;
+  background-color: #f0f0f0;
+  left:50%;
+  position:relative;
+  margin-left:-225px;
+  h2 {
+    width: 445px;
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+#bord{
+	border: 6px solid #800000;
+	border-radius: 15px;
+	background:#800000;
+	width: 1500px;
+	margin:auto;
+	}
+.list {
+  margin: auto;
+  text-align: center;
+  border: 6px solid #800000;
+  border-collapse: collapse;
+  width: inherit;
+  th{
+	border: 3px solid #800000;
+	min-width: 100px;
+	}
+  .odd {
+   background-color: #f9f9f9;
+   
+    td{
+      padding: 10px 5px 10px 5px;
+	  border: 3px solid #800000;
+    }
+    
+  }
+  
+  .even {
+    background-color: #cccccc;
+    
+  td{
+    padding: 10px 5px 10px 5px;
+	border: 3px solid #800000;
+  }
+    
+  }
+  
+
+}
+
+
+.button {
+  -moz-border-radius: 10px;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-border-radius: 10px;
+  -webkit-box-shadow: #6E7849 0 0 10px;
+  -webkit-transition: all 0.5s ease;
+  background-color: #b00000;
+  background-image: -moz-linear-gradient(90deg, #800000, #b00000);
+  background-image: -ms-linear-gradient(90deg, #800000, #b00000);
+  background-image: -o-linear-gradient(90deg, #800000, #b00000);
+  background-image: -webkit-linear-gradient(90deg, #800000, #b00000);
+  background-image: linear-gradient(90deg, #800000, #b00000);
+  border-radius: 10px;
+  border: 2px solid #503235;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.1em;
+  margin: auto;
+  padding-bottom: 9px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 9px;
+  text-decoration: none;
+  text-shadow: #000000 5px 5px 15px;
+  transition: all 0.5s ease;
+}
+
+.button:hover {
+  -moz-box-shadow: #911838 0px 0px 20px;
+  box-shadow: #911838 0px 0px 20px;
+}
+
+
+.digg_pagination {
+  background: white;
+  cursor: default;
+  /* self-clearing method: */ }
+  .digg_pagination a, .digg_pagination span, .digg_pagination em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  .digg_pagination .disabled {
+    color: #999999;
+    border: 1px solid #dddddd; }
+  .digg_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #2e6ab1;
+    color: white;
+    border: 1px solid #2e6ab1; }
+  .digg_pagination a {
+    text-decoration: none;
+    color: #105cb6;
+    border: 1px solid #9aafe5; }
+    .digg_pagination a:hover, .digg_pagination a:focus {
+      color: #000033;
+      border-color: #000033; }
+  .digg_pagination .page_info {
+    background: #2e6ab1;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center; }
+    .digg_pagination .page_info b {
+      color: #000033;
+      background: #6aa6ed;
+      padding: 0.1em 0.25em; }
+  .digg_pagination:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .digg_pagination {
+    height: 1%; }
+  *:first-child + html .digg_pagination {
+    overflow: hidden; }
+
+.apple_pagination {
+  background: #f1f1f1;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 1em;
+  cursor: default; }
+  .apple_pagination a, .apple_pagination span {
+    padding: 0.2em 0.3em; }
+  .apple_pagination .disabled {
+    color: #aaaaaa; }
+  .apple_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background-color: #bebebe;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
+  .apple_pagination a {
+    text-decoration: none;
+    color: black; }
+    .apple_pagination a:hover, .apple_pagination a:focus {
+      text-decoration: underline; }
+
+.flickr_pagination {
+  text-align: center;
+  padding: 0.3em;
+  cursor: default; }
+  .flickr_pagination a, .flickr_pagination span, .flickr_pagination em {
+    padding: 0.2em 0.5em; }
+  .flickr_pagination .disabled {
+    color: #aaaaaa; }
+  .flickr_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    color: #ff0084; }
+  .flickr_pagination a {
+    border: 1px solid #dddddd;
+    color: #0063dc;
+    text-decoration: none; }
+    .flickr_pagination a:hover, .flickr_pagination a:focus {
+      border-color: #003366;
+      background: #0063dc;
+      color: white; }
+  .flickr_pagination .page_info {
+    color: #aaaaaa;
+    padding-top: 0.8em; }
+  .flickr_pagination .previous_page, .flickr_pagination .next_page {
+    border-width: 2px; }
+  .flickr_pagination .previous_page {
+    margin-right: 1em; }
+  .flickr_pagination .next_page {
+    margin-left: 1em; }
+
+

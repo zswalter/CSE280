@@ -1,0 +1,63 @@
+<h1>Listing of Restaurants</h1>
+
+<div id="bord">
+<table class="list">
+  <tr class="even">
+  	<th>Selection</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Cuisine</th>
+    <th>Price</th>
+    <th>Rating</th>
+  </tr>
+
+<%if @list.size == 0 %>
+
+<tr class = "even">
+	<h3>No restaurants were found</h3>
+</tr>
+
+<%else%>
+
+<%= form_tag restaurant_processing_path, :method => 'get' do %>
+
+<% @list.each do |r| %>
+	<%if @count % 2 == 0%>
+  		<tr class = "even">
+  	<%else%>
+  		<tr class = "odd">
+  	<%end%>
+  	<td><%= radio_button_tag :restaurant_id, r, false %></td>
+    <td><%= r['name'] %></td>
+    <td><%= r['address'] %></td>
+    <td><%= r['cuisine'].join(", ") %></td>
+	<%case r['price'] %>
+	<%when 1 %> 
+		<td>$0-15</td>
+ 	<%when 2%>
+ 		<td>$15-30</td> 
+ 	<%when 3%>
+ 		<td>$30-50</td> 
+ 	<%when 4%> 
+ 		<td>$50-75</td>
+ 	<%when 4%> 
+ 		<td>$75+</td>
+	<%end%>
+    <td><%= r['rating'] %></td>
+  </tr>
+  <%@count = @count + 1%>
+  <%end%>
+</table>
+</div>
+
+<div id="now">
+<%=submit_tag "Order Now", :class => "button", :id => "now"%>
+</div>
+
+<%end%>
+
+<h3 class="page">
+    <%= will_paginate @list%>
+</h3>
+<%end%>
+

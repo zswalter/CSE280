@@ -1,0 +1,49 @@
+<h1>Listing of Registered Users</h1>
+
+<div id="bord">
+<table class="list">
+  <tr class = "even">
+    <th>Email</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Postal code</th>
+    <th>Phone number</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%if @users.count == 0 || @users == nil%>
+
+<h3>No users have been registered</h3>
+
+<%else%>
+<% @users.each do |user| %>
+	<%if @count % 2 == 0%>
+  		<tr class = "even">
+  	<%else%>
+  		<tr class = "odd">
+  	<%end%>
+    <td><%= user.email %></td>
+    <td><%= user.firstname %></td>
+    <td><%= user.lastname %></td>
+    <td><%= user.address %></td>
+    <td><%= user.city %></td>
+    <td><%= user.state %></td>
+    <td><%= user.postalcode %></td>
+  	 <td><%= user.phonenumber %></td>
+    <td id = "userlink"><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <%@count = @count + 1%>
+<% end %>
+</table>
+</div>
+
+<h3 id="headerlist">
+<%= will_paginate @users%>
+</h3>
+
+<%end%>

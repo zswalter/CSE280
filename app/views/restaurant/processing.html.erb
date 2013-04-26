@@ -1,0 +1,50 @@
+<iframe class = "folks" id = "podcast" width="560" height="315" src="http://www.youtube.com/embed/-_kwXNVCaxY?rel=0/?&autoplay=1" frameborder="0" allowfullscreen></iframe>
+<table class="boxes">
+<tr>
+<td class="theend">
+	<h2 id="heads">Thank You!</h2>
+		<p>for ordering from our fictitious website! If this had been an actual
+		website you would have been prompted with a phone number you could call. A customer services repersentitve
+		would have taken your order and then you would have gotten your  delicious, hot food delivered to you with haste.
+		Instead here are your ordering details for future reference.</p>
+</td>
+<td class="theend">
+	<h2 id="heads">Restaurant Details</h2>
+	<ul>
+                <li><%= @selected_restaurant['name'] %></li>
+                <li><%= @selected_restaurant['address'] %></li>
+                <li><%= @selected_restaurant['cuisine'].join(", ") %></li>
+                <li>Stars: <%= @selected_restaurant['rating'] %></li>
+                <%case @selected_restaurant['price'] %>
+                <%when 1 %> 
+                        <li>Price: $0-15</li>
+                <%when 2%>
+                        <li>Price: $15-30</li> 
+                <%when 3%>
+                        <li>Price: $30-50</li> 
+                <%when 4%> 
+                        <li>Price: $50-75</li>
+                <%when 4%> 
+                        <li>Price: $75+</li>
+                <%end%>
+                </ul>	
+</td>
+<td class="theend">
+	<h2 id="heads">User Details</h2>
+	<ul>
+                <li>First Name: <%= @user.firstname %></li>
+                <li>Last Name: <%= @user.lastname %></li>
+                <li>Phone: <%= @user.phonenumber %></li>
+                <li>E-mail: <%= @user.email %></li>
+                <li>Address: <%= @user.address %></li>
+                <li>City: <%= @user.city %></li>
+                <li>State: <%= @user.state %></li>
+                <li>Zip Code: <%= @user.postalcode %></li>
+        </ul>	
+</td>
+</tr>
+</table>
+
+<div>
+<%=params[:id]%>
+</div>

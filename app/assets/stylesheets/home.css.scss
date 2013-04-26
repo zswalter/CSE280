@@ -1,0 +1,155 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.chairs{
+	list-style: none;
+	margin: 0;
+	text-align: center;
+}
+.chairs ul li{
+	display: inline;
+}
+.table{
+	position: absolute;
+	margin: 0;
+	top: 230px;
+	left: 50%;
+	margin-left: -621px;
+}
+
+#tablediv {
+  height: 650px;
+}
+
+#chair {
+	top: 125px;
+	-webkit-transition: padding 2s;
+	position: relative;
+	text-align: center;
+}
+#chair:hover{
+	top: 55px;
+	-webkit-transition: padding 2s;
+}
+
+#AboutUsDiv{
+	background:image-url("home/about/AboutUs-Inlay.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	width:800px;
+	height:450px;
+	left:50%;
+	position:relative;
+	margin-left:-400px;
+	top: 30px;
+	padding-top: 15px;
+}
+h1{
+	text-align:center;
+	margin-top: 15px;
+}
+h2{
+	margin-left:30px;
+	width:150px;
+	text-decoration: none;
+}
+p{
+	Margin-left:20px;
+	width: 400px;
+	font-size: 12px;
+}
+#BottomBarDiv{
+  position:absolute;
+  left:50%;
+  margin-left:-130px;
+  top: 900px;
+} 
+#image{
+	height:110px;
+	width:90px;
+	padding:0px;
+}
+#pics{
+	position: absolute;
+	margin-left: 550px;
+	top: 20px;
+}
+#name{
+	font-size: 12px;
+}
+
+
+#tos {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	left:50%;
+	margin-left: -410px;
+	position: relative;
+	background: #800000;
+	color: #e5e5e5;
+	width: 750px;
+	padding: 30px;
+	border-radius: 25px;
+	border: 5px solid black;
+  h2, h3 {
+    width: 650px;
+    text-decoration: none;
+  }
+  
+  p{
+    width: 650px;
+  }
+  
+  ol {
+      width: 650px;
+  
+  }
+  
+  li {
+      width: 650px;
+
+  }
+
+}
+
+#contact {
+  
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 200px;
+  h2, h3 {
+    width: 650px;
+    text-decoration: none;
+  }
+  
+  p{
+    width: 650px;
+  }
+  
+}
+#ad{
+	left:50%;
+	margin-left: -300px;
+	position: relative;
+}
+#advert {
+	left:50%;
+	margin-left: -280px;
+	position: relative;
+	width: 500px;
+	background: #800000;
+	color: #e5e5e5;
+	padding: 30px;
+	border-radius: 25px;
+	border: 5px solid black;
+	}
+#aboutp {
+	width: 470px;
+	position: relative;
+	background: #800000;
+	color: #e5e5e5;
+	padding: 10px;
+	border-radius: 25px;
+	border: 5px solid black;
+	}

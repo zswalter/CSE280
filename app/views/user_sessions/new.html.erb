@@ -1,0 +1,39 @@
+
+<%= form_for(@user_session) do |f| %>
+  <% if @user_session.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_session.errors.count, "") %> Login error(s).</h2>
+
+      <ul>
+      <% @user_session.errors.each do |attribute, msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div id="FormDiv">
+	<fieldset>
+		
+	<!--<legend>Please Log In</legend>-->
+		<h1>Please Log In</h1>
+			<ol id=inputFields>
+				<li class="pad">
+					<!--<label for=email>Email</label>-->
+					<%=f.text_field :email, :placeholder => "Example@domain.com", :class => "inputbox" %>
+				</li>
+				<li class="pad">
+					<!--<label for=password>Password</label> -->
+					<%=f.password_field :password, :placeholder => "Password", :class =>"inputbox"%>
+				</li>
+				<li>
+					<%=link_to "Sign Up", register_path, :class => "listStyle"%>
+					<%=link_to "Forgot Password?", contact_path, :class => "forgot"%>
+				<li id="loginButton">
+					<%=submit_tag "Sign-In", :class => "button"%>
+		</fieldset>
+	<% end %>
+</div>	
+
+

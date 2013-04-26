@@ -1,0 +1,74 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+		<h2><%= pluralize(@user.errors.count, "error") %> prohibited you from registering:</h2>
+
+		<ul>
+			<% @user.errors.each do |attribute, msg| %>
+				<% if attribute.to_s != 'password_confirmation'%>
+					<li><%= msg %></li>
+				<%end%>
+			<% end %>
+		</ul>
+	</div>
+	<% end %>
+	<div id="RegDiv">
+		<fieldset>
+		<% if @edituser %>
+		<h1 style="text-align: left;margin-left: 50px;">Edit User Profile</h1>
+		<% else %>
+		<h1 style="text-align: left;margin-left: 50px;">Registration</h1>
+		<% end %>
+				<div class="text">
+					<%= f.label :firstname, "First Name" %><br />
+					<%= f.text_field :firstname, :class => "inputstyle"  %>
+				</div>
+				<div class="text">
+					<%= f.label :lastname, "Last Name" %><br />
+					<%= f.text_field :lastname, :class => "inputstyle"  %>
+				</div>
+				<div class="text">
+					<%= f.label :email, "E-mail"%><br />
+					<%= f.text_field :email, :class => "inputstyle"  %>
+				</div>
+				<div class="text">
+					<%= f.label :address, "Address" %><br />
+					<%= f.text_field :address, :class => "inputstyle"  %>
+				</div>
+				<div class="text">
+					<%= f.label :city, "City" %><br />
+					<%= f.text_field :city, :class => "inputstyle"  %>
+				</div>
+				<div class="text">
+					<%= f.label :state, "State" %><br />
+					<%= f.select :state, User::STATE_CODE, {:prompt => "Select State"}, :class => "inputstyle", :id => "boxselect"  %>
+				</div>
+				<div class="text">
+					<%= f.label :postalcode, "Zip Code" %><br />
+					<%= f.text_field :postalcode, :class => "inputstyle"  %>
+				</div>
+				<div class="text">
+					<%= f.label :phonenumber, "Phone Number" %><br />
+					<%= f.text_field :phonenumber, :class => "inputstyle"  %>
+				</div>
+				<div class="text">
+					<%= f.label :password_confirmation, "Password" %><br />
+					<%= f.password_field :password, :class => "inputstyle", :id =>"pass_field"  %>
+				</div>
+
+				<div class="text">
+					<%= f.label :password_confirmation, "Confirm Password" %><br />
+					<%= f.password_field :password_confirmation, :class => "inputstyle", :id =>"pass_field"  %>
+				</div>
+				<% if @edituser %>
+				<div id="RegButton">
+					<%= f.submit "Submit", :class => "button", :id => "RegButton" %>
+				</div>
+				<% else %>
+				<div id="RegButton">
+					<%= f.submit "Register", :class => "button", :id => "RegButton" %>
+				</div>
+				<% end %>
+		</fieldset>
+	</div>
+<% end %>

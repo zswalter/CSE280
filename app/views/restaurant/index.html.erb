@@ -1,0 +1,39 @@
+<h1 id="greeting">Welcome, <%=current_user.firstname%>, to our restaurant selection page!</h1>
+<iframe id = "podcast" width="560" height="315" src="http://www.youtube.com/embed/XdCzfRFw6zg" frameborder="0" allowfullscreen></iframe>
+<div id = "boarddiv">
+	
+	<div id="smallblack"><%=image_tag 'restaurants/menu_small.gif'%></div>	
+
+<div id= "instructions">
+<h3>How to order:</h3>
+
+<ol>
+	<li class="instrline">Select a category</li>
+	<li class="instrline">Discard restarunt types from below the graph</li>
+	<li class="instrline">Choose a restaurant type by clicking a bar</li>
+	<li class="instrline">Decide on one of our great restarunt from the list.</li>
+</ol>
+
+</div>
+
+</div>
+
+
+<div id="selectcenter">
+<fieldset class="graphselect">
+	<legend>Restaurant Categories</legend>
+	
+	<%=form_tag restaurant_path, :method => 'get' do %>
+		<%=select_tag :graph_categories, options_for_select( ['cuisine', 'address', 'rating', 'price'], params[:graph_categories] ),  :id => "select_cat" %>
+		<%=submit_tag "Submit", :class => "button", :id => "sub_graph" %>
+	<%end%>
+	
+</fieldset>
+
+</div>
+
+<div id = "graph_display">
+	<%=render :partial => 'graph', :locals => {:hGraph => @hGraph} %>
+</div> 
+
+

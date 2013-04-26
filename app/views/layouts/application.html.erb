@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>We | Deliver</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag 'gmaps4rails' %>
+  <%= csrf_meta_tags %>
+  <!--Latitude and Longitude for geotag--> 
+  <meta name="geo.position" content="42.6581;-83.1497">
+  <meta name="geo.placename" content="We Deliver, Rochester Hills, Michigan">
+  <meta name="geo.region" content="US-MI">
+  <!--main meta tags-->
+  <meta name="description" content="High quality restaurant food delivered to your home. Reasonable delivery rates for at your door service."/>
+  <meta name="keywords" content="local hot fresh food"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>	
+
+	<% if @home_banner %>
+	<% else %>
+	<div id="MenuBarDiv">
+		<ul class="MenuBar">
+			<li class="listStyle"><%=link_to "HOME", root_path, :class => "menuBarLinks"%></li>
+			<li class="listStyle"> <%=link_to "ABOUT", about_path, :class => "menuBarLinks"%>
+			<li class="listStyle"><%=link_to "RESTAURANTS", restaurant_path, :class => "menuBarLinks"%> </li>
+			
+			<%=link_to image_tag('home/landing/Logo.png'), root_path, :id => "WeDeliverLogo" , :alt => "company logo"%>
+			
+			<li class="listStyle"><%=link_to "RANGE", restaurant_range_path, :class => "menuBarLinks"%> </li>
+			<li class="listStyle"> <%=link_to "CONTACT US", contact_path, :class => "menuBarLinks"%> </li>
+			<li class="listStyle"><%=link_to "ORDER", restaurant_order_path, :class => "menuBarLinks"%>  </li>
+		</ul>
+	</div>
+
+	<% end %>
+
+	<% flash.each do |name, msg| %>
+		<div>
+		<% if msg.is_a?(String) %>
+		<%=content_tag :div, msg, :id => "flash_#{name}"%>
+		<%end%>
+		</div>
+	<%end%>
+
+
+	<% if @home_banner %>
+	<div class = "login">
+		<ul>
+		<%if current_user %>
+			<li> <%=link_to "Edit Profile", edit_user_path(:current), :id => "login" %> </li>
+			<li> | </li>
+			<li> <%=link_to "Logout", logout_path, :id => "login" %></li>
+		<% else %>
+			<li id="login"> <%= link_to "Register", register_path %></li>
+			<li> | </li>
+			<li id="login"> <%= link_to "Login", login_path %></li>
+		<% end %>
+		
+		</ul>
+	</div>
+	<% else %>
+	<div class = "loginOther">
+		<ul>
+		<%if current_user %>
+			<li> <%=link_to "Edit Profile", edit_user_path(:current) %> </li>
+			<li> | </li>
+			<li> <%=link_to "Logout", logout_path %></li>
+		<% else %>
+			<li> <%= link_to "Register", register_path %></li>
+			<li> | </li>
+			<li> <%= link_to "Login", login_path %></li>
+		<% end %>
+		
+		</ul>
+	</div>
+	<% end %>
+
+<div class = "container">
+	<%= yield %>
+</div>
+
+
+<div id="footer">
+	<ul class="MenuBar">
+		<li class="listStyle"> <%=link_to 'About', about_path, :class => "menuBarLinks" %> | </li>
+		<li class="listStyle"> <%=link_to 'Advertise', advertise_path, :class => "menuBarLinks" %> | </li>
+		<li class="listStyle"> <%=link_to 'Contact Us', contact_path, :class => "menuBarLinks" %> | </li>
+		<li class="listStyle"> <%=link_to 'Terms of Service', terms_path, :class => "menuBarLinks" %> |</li>
+		<li class="listStyle"> <%=link_to 'Jobs', jobs_path, :class => "menuBarLinks" %> </li>
+	</ul>
+</div>
+
+<%= yield :scripts %>
+</body>
+
+</html>

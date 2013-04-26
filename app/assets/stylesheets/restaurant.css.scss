@@ -1,0 +1,173 @@
+// Place all the styles related to the restaurant controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#greeting {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+  width: 950px;
+  height: 35px;
+  line-height: 35px;
+  padding: 10px 0;
+  font-size: 26px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 25px; 
+  -moz-border-radius: 25px; 
+  -webkit-border-radius: 25px; 
+  border: 4px solid #800000;
+}
+
+#selectcenter {
+  width: 100%;
+  text-align: center;
+}
+
+fieldset.graphselect {
+  width: 400px;
+  height: 75px;
+  padding-top: 50px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 25px; 
+  -moz-border-radius: 25px; 
+  -webkit-border-radius: 25px; 
+  border: 4px solid #800000;
+  margin-top: 25px;
+  margin-bottom: 35px;
+  position: relative;
+  
+  legend {
+    
+    top: 15px;
+    margin-left:15px;
+    margin-bottom: 15px;
+    position:absolute;
+    font-size:14px;
+    font-weight: bold;
+    background-color: #ffffff;
+    text-decoration: underline;
+    
+  }
+ 
+  
+ 
+#select_cat { 
+   font-size: 16px;
+   width: 200px;
+   height: 30px;
+   overflow: hidden;
+   border-radius: 10px;
+   border:solid 1px #929292;
+   background: #ddd;
+}
+
+#sub_graph {
+  margin-left: 45px;
+}
+
+
+}
+
+#graph_display {
+  width: 1280px;
+  height: 800px;
+  margin: 0px auto;
+}
+
+
+
+#instructions {
+  
+  font-weight: bold;
+  color: white;
+  width: 695px;
+  height: 300px;
+  padding-left: 50px;
+  padding-top: 75px;
+  text-align: left;
+  background-image: image-url("restaurants/menu_background.png");
+  vertical-align: top;
+  display: inline-block;
+
+
+}
+
+
+.instrline {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#boarddiv {
+  margin-top: 75px;
+  margin-bottom: 65px;
+  text-align: center;
+
+}
+
+#smallblack {
+  display: inline-block;
+  vertical-align: middle;
+
+}
+.map {
+	left: 50%;
+	margin-left: -400px;
+	position: relative;
+	}
+#podcast{
+	left:50%;
+	margin-left: -310px;
+	position: relative;
+	padding: 30px;
+	border-radius: 25px;
+	background: #800000;
+	border: 5px solid black;
+}
+
+#now {
+  
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+} 
+
+.page {
+  margin-top: 55;
+  margin-left: 300px;
+}
+
+.folks{
+  margin-top: 75px;
+}
+
+.theend{
+  width: 470px;
+  background: #800000;
+  color: #e5e5e5;
+  padding: 10px;
+  border-radius: 25px;
+  border: 5px solid black;
+  margin-top: 65px;
+  display: inline-block;
+  height: 220px;
+  margin-right:7.5px;
+  margin-left:7.5px;
+}
+.boxes{
+	left:50%;
+	margin-left:-757.5px;
+	position:relative;
+	}
+#heads{
+	border-bottom: 5px solid black;
+	distplay:inline;
+	width:353px;
+	left:-20px;
+	position:relative;
+	}

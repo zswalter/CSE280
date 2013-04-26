@@ -1,0 +1,79 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#RegDiv{
+	padding:0px;
+	margin-right:auto;
+	margin-left:auto;
+	background-image: image-url("users/inlay.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	height:800px;
+	width:450px;
+	margin-top:75px;
+	label {
+	  margin-top: 10px;
+	}
+	
+}
+.inputstyle{
+     border-radius: 10px;
+     border:solid 1px #929292;
+     font-size: 14px;
+     width: 245px;
+     padding: 7px 10px 7px 8px;
+     background: #ddd; 
+     //margin-bottom: 35px; 
+ }
+ .text{
+	text-align:left;
+	font-weight: bold;
+	padding-left:35px;
+	padding-right:30px;
+	padding-top:5px;
+	padding-bottom:5px;
+	width: 140px;
+	}
+fieldset{
+	border:0;
+	margin:auto;
+	width:500px;
+	height:350px;
+	text-align:left;		
+}
+#boxselect{
+  width: 90%;
+}
+	
+	
+ #RegButton{
+  margin-top: 5px;
+  padding-left:35px;
+  padding-right: 35px;
+}
+
+
+.field_with_errors {
+  
+  
+  font-weight: bold;
+  text-align:center;
+  color: red;
+  width: 140px;
+  margin-top: -10px;
+  
+}
+
+#pass_field{
+  font-size: 20px;
+  padding: 3px 10px 3px 10px;
+  font-weight: bold;
+}
+
+#headerlist {
+  margin-left: 55px;
+}
+
+#userlink {
+  padding-left: 25px;
+}

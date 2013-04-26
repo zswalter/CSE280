@@ -1,0 +1,5 @@
+	
+<%=high_chart("chart_id",hGraph) do |config|%>
+	<%=raw "options.plotOptions.column.point.events.click = function() { displayRestaurantSelect(options.xAxis.title.text, this.series.name)}"  %>
+	<%=raw "options.tooltip.formatter = function() {return '<b>' + this.series.name + '</b>' + '<br/>' + 'Total: ' + this.point.y; }"%>
+<%end%>
